@@ -4,7 +4,7 @@ set -e
 app_name="${1:-pal-tracker}"
 script_dir="${2:-.}"
 service_name="${3:-tracker-database}"
-service_key="${4:-cf-mysql}"   # Default to same key-name as 'cf mysql'
+service_key="${4:-flyway-migration-key}"
 
 function pre_tunnel_exit() {
     echo "ERROR: No suitable credentials found for application '$app_name' and service '$service_name'" >&2
